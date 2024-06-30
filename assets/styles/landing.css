@@ -1,0 +1,292 @@
+@import url(fonts.css);
+@import url(colors.css);
+@import url(widgets.css);
+
+/* hero*/
+.hero{
+    
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+   /* border: 1px solid var(--white);*/
+    padding-left: 10%;
+}
+.descript h1{
+    margin: 0px;
+    font-family: 'Panthera';
+    color: var(--purple);
+    font-size: 50px;
+}
+.descript h2{
+    margin: 0px;
+    font-family: 'BEYNO';
+    color: var(--purple);
+    font-size: 40px;
+}
+.descript p{
+    margin: 40px 0;
+    font-size: 1em;
+    color: var(--white);
+    font-family: 'Cantarel';
+    }
+
+.illustrat-descript{
+    transform: scale(.8);
+}
+.descript a{color: var(--white);}
+
+
+/* stuck widget|sidelink*/ 
+
+.sidelink{
+    margin-top: 5px;
+    margin-left: 30px;
+    position: fixed;
+   /* border: 1px solid var(--white);*/
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* widget */
+.widget{
+    display: flex;
+}
+.linelong,.lineshort{
+    width: 4px;
+    background-color: var(--purple);
+    }
+.sidelink .linelong{
+    height: 60vh;
+}
+.sidelink, .lineshort{
+    height: 70%;
+    align-self: center;
+    }
+.sidelink .left-group{
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    }
+.sidelink .left-group .list-link{
+    display: grid;
+    height: 30%;
+    align-items: end;
+    }
+    .left-group .list-link>*:hover{
+        filter: invert(22%) sepia(58%) brightness(100%) contrast(1200%);
+    }
+
+
+
+
+
+/* slide */
+.slides{
+    margin: 10%;
+    display: flex ;
+    margin-top: 40px; 
+    height: 250px;
+}
+
+.slide{
+background-color: var(--bleue);
+display: flex;
+
+}
+.slide .desc-slide{
+    margin: 0 30px;
+}
+
+.slide .desc-slide h1{
+    font-family: 'BEYNO';
+    color: var(--purple);
+        }
+
+.slide .desc-slide p{
+    text-align: justify;
+    color: var(--white);
+    font-family: 'Cantarel';
+    font-size: .7em;
+        }
+.slide .desc-slide a{
+    color: var(--white);
+}
+
+.slide img:not(.suivant img){
+    padding-left: 40px;
+}
+
+.slide img:hover:not(.suivant img){
+    transform: scale(1.1);
+}
+
+.suivant{
+align-self: center;
+}
+
+/* naissance d'un prince*/
+
+.section-a{
+ /*   border: 1px solid var(--white);*/
+    margin: 40px 10% 0 10%;
+    display: flex;
+    min-width: 800px;
+}
+
+.boxes .box h1{
+    padding: 15px;
+    font-family: 'BEYNO';
+    color: var(--purple);
+}
+.boxes .box p{
+    padding: 15px;
+    text-align: justify;
+    color: var(--white);
+    font-family: 'Cantarell';
+}
+
+.section-a .boxe2{
+    /*border: 1px solid var(--purple);*/
+    margin: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    }
+.boxe2 .photo{
+   /* border: 1px solid red;*/
+    height: 150px;
+}
+.boxe2 img{
+    position: relative;
+    top:-145px;
+    transform: scale(0.7);
+    }
+.boxe2 .cadre{
+    padding: 250px 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--white);
+}
+.cadre p > *{
+    font-family: 'cantarell';
+    font-size: small;
+    line-height: 4px;
+}
+.cadre h1{ text-align: center;}
+.cadre p{  font-family: 'cantarell'; margin: 5px; }
+.cadre p span{  font-weight: bolder; }
+.btn-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* occupé l'espace restant du btn-bar en display flex*/
+.last{
+    flex-grow: 1;
+}
+
+.btn-bar .btn a{
+    color: var(--purple);
+    text-decoration-line: none;
+    font-family: 'cantarell' ;
+    font-size: 0.8em;
+}
+
+.btn-bar .btn a:hover{
+    color: var(--white);
+    font-size: 0.9em;
+}
+
+.section-b{
+    min-width: 800px;
+    margin: 0 10%;
+}
+
+/* .section-b >*  avec display flex de ses items*/
+.section-b >* { 
+   /* border: 1px solid var(--white);*/
+   margin: 0 10%;
+   display: flex;
+   align-items: center;
+}
+
+ /* section-c */
+.section-c{
+    height: 600px;
+    background-image: url("../Illustrations_Logo/Accueil/Pantherhome7.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.formulaire{
+    border-radius: 60px;
+    margin: 40px 30%;
+    min-width: 350PX;
+    padding: 40px;
+    background: linear-gradient(rgba(250, 250, 250, 0.767), rgba(47, 58, 71, 0.164));
+}
+.formulaire form{
+    text-align: center;
+}
+
+.formulaire form p{ font-family: 'cantarell';}
+.formulaire form h1{font-family: 'cantarell';}
+
+
+
+
+
+@media (max-width:1500px){
+    /* responsive hero */
+    .hero{
+        flex-direction: column;
+    }
+    .boxes, .slides{
+        flex-direction: column;
+        margin: 0 2%;
+        }
+        .slides{
+    max-width: 100%;
+            }
+        .slide img:not(.suivant img){
+            width: 320px;
+        }
+        .slide{
+            margin-bottom: 10px;
+            min-width: 800px;
+        }
+        .slide .desc-slide p{
+            font-size: 1em;
+                }
+        .suivant img{
+        visibility: hidden;
+        }
+/* disposer section en colonne si reduction taille Ecran */
+        .section-a{
+            margin-top: 800px; /* constrain overlapping sections*/
+            }
+        .section-a .boxe2{
+            flex-direction: column;
+            }
+        .boxe2 .cadre{
+                padding: 200px 20px;
+                padding-bottom: 0px;
+                }
+
+        .last{
+            flex-grow: 0;
+        }
+/*
+        .section-footer{
+            display: flex;
+            flex-direction: column;
+        }
+*/
+        .formulaire{
+            min-width: 800px;
+            margin: 40px 0;}
+}
